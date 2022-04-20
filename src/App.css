@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Oswald&family=Playfair+Display&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  body {
+    @apply bg-gray-50;
+  }
+  .App {
+    @apply bg-gray-50 w-full h-full flex flex-col justify-center align-middle content-center;
+  }
+  .Container {
+    @apply h-auto min-h-screen flex mx-auto border content-center flex-col w-4/5 rounded-sm border-opacity-50 border-gray-100;
+  }
+
+  /* header section */
+
+  .Header {
+    @apply flex content-center justify-between align-middle items-center h-16 border-b-2 border-opacity-50 border-gray-300 from-white to-indigo-50 bg-gradient-to-br flex-row shadow-sm bg-blend-overlay px-5 rounded-t-lg font-abel;
+  }
+  .Sub-Title {
+    @apply text-lg text-center text-indigo-600;
+  }
+  .Title {
+    @apply font-oswald text-indigo-700 uppercase tracking-widest;
+  }
+  .Sub-header-group {
+    @apply flex flex-row justify-around align-middle w-36 content-center items-center;
+  }
+  .Main {
+    @apply py-8;
+  }
+
+  /* todo section  */
+  .form-input {
+    @apply font-abel h-10 w-full border-b-2 border-blue-400 text-indigo-900 placeholder-transparent focus:outline-none focus:border-blue-700;
+  }
+
+  .form-input-label {
+    @apply absolute font-abel left-0 -top-3.5 tracking-wider text-indigo-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-indigo-700 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-indigo-700 peer-focus:text-sm cursor-text;
+  }
+  .submit-btn {
+    @apply px-4 font-abel tracking-wider py-1 border rounded-xl text-center font-medium text-white bg-indigo-400 focus:ring-2 focus:ring-white hover:bg-indigo-700 shadow-lg shadow-indigo-200 flex flex-row justify-center items-center;
+  }
+
+  /* todo list */
+  .todo-list {
+    @apply mt-2 bg-gray-100 p-5 h-4/6 grid grid-cols-4 grid-flow-row grid-rows-5 gap-4 overflow-visible;
+  }
+
+  /* todo items  */
+
+  .todo-item {
+    @apply h-auto col-auto bg-gradient-to-tr rounded-lg p-3 font-playFair flex flex-col shadow-md hover:shadow-inner from-gray-50;
+  }
+
+  .purple-color {
+    @apply to-indigo-100 shadow-indigo-200;
+  }
+
+  .rose-color {
+    @apply to-rose-100 shadow-rose-200;
+  }
+
+  .emerald-color {
+    @apply to-emerald-100 shadow-emerald-200;
+  }
+
+  .pink-color {
+    @apply to-pink-100 shadow-pink-200;
+  }
+
+  .blue-color {
+    @apply to-blue-100 shadow-blue-200;
+  }
+
+  .orange-color {
+    @apply to-orange-100 shadow-orange-200;
+  }
+
+  .slate-color {
+    @apply  to-slate-200 shadow-slate-300;
+  }
+
+  .teal-color {
+    @apply  to-teal-100 shadow-teal-100;
+  }
+
+  .sky-color {
+    @apply to-sky-200 shadow-sky-300;
+  }
+
+  .violet-color {
+    @apply to-violet-200 shadow-violet-300;
+  }
+
+  .fuchsia-color {
+    @apply to-fuchsia-100 shadow-fuchsia-200;
+  }
+
+  .todo-text {
+    @apply text-gray-600 tracking-wide font-playFair text-left text-base;
+  }
+
+  .todo-action {
+    @apply flex flex-row items-center justify-between m-3;
+  }
+}
