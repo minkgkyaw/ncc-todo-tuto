@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     fontFamily: {
       abel: "'Abel', sans-serif",
-      playFair: "Playfair Display', serif",
+      playFair: "'Playfair Display', serif",
       oswald: "'Oswald', sans-serif",
     },
     extend: {},
