@@ -21,7 +21,7 @@ const Header = () => {
 
 	const changeName = () => {
 		const newName = prompt('Update new name', name);
-		if (newName !== '') {
+		if (newName !== '' || newName !== null) {
 			setName(newName);
 			return localStorage.setItem('userName', newName);
 		}
