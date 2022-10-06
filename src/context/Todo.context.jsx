@@ -49,7 +49,7 @@ const reducer = (state, { type, payload }) => {
 					? { ...todo, title: payload.value }
 					: todo
 			);
-			localStorage.setItem(JSON.stringify('todoList', updatedTodo));
+			localStorage.setItem('todoList', JSON.stringify(updatedTodo));
 			return updatedTodo;
 		}
 		default:
