@@ -1,26 +1,28 @@
-import React from "react";
-import TodoItem from "./Todo.component";
-import { Skeleton } from "../";
+import React from 'react';
+import TodoItem from './Todo.component';
+import { Skeleton } from '../';
+import { useContext } from 'react';
+import { TodoContext } from '../../context/Todo.context';
 
-const TodoList = ({ todos, deleteTodo, updateTodo }) => {
-  return (
-    <div className="todo-list">
-      {todos.length !== 0 ? (
-        todos.map(({ id, title, bgColor }) => (
-          <TodoItem
-            key={id}
-            id={id}
-            title={title}
-            deleteTodo={deleteTodo}
-            updateTodo={updateTodo}
-            bgColor={bgColor}
-          />
-        ))
-      ) : (
-        <Skeleton />
-      )}
-    </div>
-  );
+const TodoList = () => {
+	const { todoList } = useContext(TodoContext);
+
+	return (
+		<div className='todo-list'>
+			{todoList.length !== 0 ? (
+				todoList.map(({ id, title, bgColor }) => (
+					<TodoItem
+						key={id}
+						id={id}
+						title={title}
+						bgColor={bgColor}
+					/>
+				))
+			) : (
+				<Skeleton />
+			)}
+		</div>
+	);
 };
 
 export default TodoList;
