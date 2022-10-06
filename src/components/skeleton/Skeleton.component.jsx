@@ -7,7 +7,7 @@ const Skeleton = () => {
     setShow(true);
     setTimeout(() => {
       return setShow(false);
-    }, 3000);
+    }, 1500);
   }, []);
   return show ? (
     <div className="border-slate-400 rounded-md p-4 max-w-sm w-full bg-slate-100 shadow-md shadow-slate-300 mx-auto">
